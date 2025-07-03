@@ -62,63 +62,75 @@ El Backend contiene la lógica de negocio y los servicios relacionados con la AP
 
 Backend/
 ├── controllers/
-│   ├── acompananteController.js      # Manejo de acompañantes
-│   ├── authController.js             # Autenticación de usuarios
-│   ├── conductorController.js        # Manejo de conductores
-│   ├── discapacitadoController.js    # Manejo de personas discapacitadas
-│   └── verificacionController.js     # Verificación de usuarios
+│   ├── acompananteController.js         # Manejo de acompañantes
+│   ├── authController.js                # Autenticación de usuarios
+│   ├── conductorController.js           # Manejo de conductores
+│   ├── discapacitadoController.js       # Manejo de personas discapacitadas
+│   └── verificacionController.js        # Verificación de usuarios
+│
 ├── middlewares/
-│   └── verificarToken.js             # Middleware de autenticación
+│   └── verificarToken.js                # Middleware de autenticación
+│
 ├── models/
-│   ├── Acompanante.js                # Modelo de datos para acompañantes
-│   ├── Conductor.js                  # Modelo de datos para conductores
-│   └── Discapacitado.js              # Modelo de datos para discapacitados
+│   ├── Acompanante.js                   # Modelo de datos para acompañantes
+│   ├── Conductor.js                     # Modelo de datos para conductores
+│   └── Discapacitado.js                 # Modelo de datos para discapacitados
+│
 ├── routes/
-│   ├── acompananteRoutes.js          # Rutas para acompañantes
-│   ├── authRoutes.js                 # Rutas de autenticación
-│   ├── conductorRoutes.js            # Rutas para conductores
-│   ├── discapacitadoRoutes.js        # Rutas para discapacitados
-│   └── verificacionRoutes.js         # Rutas de verificación de datos
-├── uploads/                          # Carpeta para subir archivos (fotos, docs)
-├── db.js                             # Configuración de base de datos
-├── index.js                          # Archivo principal del servidor
-└── .env                              # Variables de entorno
+│   ├── acompananteRoutes.js             # Rutas para acompañantes
+│   ├── authRoutes.js                    # Rutas de autenticación
+│   ├── conductorRoutes.js               # Rutas para conductores
+│   ├── discapacitadoRoutes.js           # Rutas para discapacitados
+│   └── verificacionRoutes.js            # Rutas de verificación de datos
+│
+├── uploads/                             # Carpeta para archivos subidos
+├── db.js                                # Configuración de la base de datos
+├── index.js                             # Archivo principal del servidor
+└── .env                                 # Variables de entorno
+
 
 El Frontend contiene el código de la interfaz de usuario de la aplicación.
 
 Frontend/
 ├── public/
-│   ├── NaviGuiaAppA.jpeg             # Imagen de formulario
+│   ├── NaviGuiaAppA.jpeg                # Imagen de formulario
+│   └── NaviGuiaAppB.jpeg
 │   └── NaviGuiaAppC.jpeg
+│
 ├── src/
 │   ├── assets/
-│   │   └── NaviGuiaHome.jpg          # Imagen principal de la página de inicio
+│   │   └── NaviGuiaHome.jpg             # Imagen principal de inicio
+│
 │   ├── components/
-│   │   ├── BotonesInicio.jsx         # Botones de inicio
-│   │   ├── BotonesModoOscuroVolver.jsx # Botón para modo oscuro y volver
-│   │   └── BotonesRuta.jsx           # Botones para rutas
+│   │   ├── BotonesInicio.jsx            # Botones de inicio
+│   │   ├── BotonesModoOscuroVolver.jsx  # Botón para modo oscuro y volver
+│   │   └── BotonesRuta.jsx              # Botones para rutas
+│
 │   ├── formularios/
-│   │   ├── RegistroAcompanantes.jsx  # Formulario de acompañantes
-│   │   ├── RegistroConductores.jsx   # Formulario de conductores
-│   │   └── RegistroDiscapacitados.jsx# Formulario de discapacitados
+│   │   ├── RegistroAcompanantes.jsx     # Formulario acompañantes
+│   │   ├── RegistroConductores.jsx      # Formulario conductores
+│   │   └── RegistroDiscapacitados.jsx   # Formulario discapacitados
+│
 │   ├── styles/
-│   │   ├── Home.css                  # Estilos para página de inicio
-│   │   ├── index.css                 # Estilos globales
-│   │   ├── inicio.css                # Estilos pantalla de inicio
-│   │   ├── light.css                 # Estilos modo claro
-│   │   ├── dark.css                  # Estilos modo oscuro
-│   │   ├── MapaCali.css              # Estilos del mapa
-│   │   ├── PaginaRuta.css            # Estilos para página de ruta
-│   │   └── Perfil.css                # Estilos perfil de usuario
+│   │   ├── Home.css                     # Estilos página de inicio
+│   │   ├── index.css                    # Estilos globales
+│   │   ├── inicio.css                   # Estilos pantalla inicio
+│   │   ├── light.css                    # Estilos modo claro
+│   │   ├── dark.css                     # Estilos modo oscuro
+│   │   ├── MapaCali.css                 # Estilos mapa de Cali
+│   │   ├── PaginaRuta.css               # Estilos página de rutas
+│   │   └── Perfil.css                   # Estilos perfil
+│
 │   ├── utils/
-│   │   └── validaciones.js           # Funciones de validación
-│   ├── Home.jsx                      # Componente principal de inicio
-│   ├── index.js                      # Archivo principal del frontend
-│   ├── inicioRegistro.jsx           # Componente de inicio de registro
-│   ├── login.jsx                     # Componente de login
-│   ├── MapaCali.jsx                  # Componente para mostrar mapa de Cali
-│   ├── PaginaRuta.jsx                # Página de rutas
-│   └── Perfil.jsx                    # Página de perfil del usuario
+│   │   └── validaciones.js              # Funciones de validación
+│
+│   ├── Home.jsx                         # Página principal
+│   ├── index.js                         # Entrada principal del frontend
+│   ├── inicioRegistro.jsx              # Componente de registro
+│   ├── login.jsx                        # Componente de login
+│   ├── MapaCali.jsx                     # Mapa de Cali
+│   ├── PaginaRuta.jsx                   # Página de rutas
+│   └── Perfil.jsx                       # Perfil del usuario
 
 Licencia
 MIT © FabiansDev-coder
